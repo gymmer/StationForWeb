@@ -1,0 +1,100 @@
+body{
+	font-family: "Helvetica","Arial",sans-serif;
+	font-size: 16px;
+	line-height: 1em;
+	width: 60em;
+	margin: 1em auto 1em auto;
+	border: 0.1em solid #334;
+	background-image: url(../images/background.jpg);
+	background-repeat: repeat-y;
+}
+header{
+	background-color: #334;
+}
+header img{
+	padding: 1em;
+}
+nav{
+	background-color: #758596;
+	line-height: 1.1em;
+}
+nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0.5em 0 0.5em 5em;
+	color: #fff;
+}
+nav li{
+	display: inline;
+	padding: 0.5em 1em;
+	border-right: 0.1em solid #99a;
+	border-left: 0.1em solid #99a;
+}
+nav li.mouseover{
+	background-color: #799;
+	cursor: pointer;
+}
+nav li.mouseout{
+	background-color: #758596;
+}
+section#content{
+	background-color: #edc;
+	background-image: url(../images/book.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	padding: 0 5em 0 5em;
+}
+div.book{
+	padding: 0.5em 0 1em 0;
+	background-image: url(../images/slide.png);
+	background-repeat: repeat-x;
+	background-position: top left;
+	clear: both;
+}
+p.book-title{
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 0.5em 0;
+}
+p.book-title2{
+	font-size: 1.1em;
+	font-weight: normal;
+	margin: 0.7em 0em;
+}
+div.book-right{
+	width: 80%;
+	float: right;
+}
+img.book-poster{
+	width: 9em;
+	height: 12em;
+}
+img.book-like{
+	display: block;
+	margin: 1.2em 1.5em;
+}
+img.book-link{
+	height: 2.5em;
+	margin-left: 1.5em;
+}
+.book-right a{
+	text-decoration: none;
+}
+ul.book-intro{
+	list-style: circle;
+	line-height: 1.5em;
+	margin: 1.2em 3em;
+	padding: 0;
+}
+ul.book-intro q::before, 
+ul.book-intro q::after{
+	content:none;
+}
+footer{
+	font-size: 0.8em;
+	text-align: center;
+	background-color: #334;
+	color: #fff;
+	padding: 0.5em;
+	clear: both;
+}
