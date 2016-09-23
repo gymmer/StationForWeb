@@ -1,4 +1,5 @@
 ﻿cats = ["HTML & CSS", "JavaScript", "jQuery", "Node.js", "HTTP & Web"];
+pdfFilesPath = "D:\/师大云盘\/web\/"
 books = [
 	{
 		cat:"HTML & CSS",

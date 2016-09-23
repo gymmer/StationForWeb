@@ -92,7 +92,7 @@ function initialContent(cat)
 		{
 			var bookPdf = document.createElement("a");
 			var bookPdfIcon = document.createElement("img");
-			bookPdf.setAttribute("href","files\/"+book.pdf);
+			bookPdf.setAttribute("href",pdfFilesPath+book.pdf);
 			bookPdf.setAttribute("target","_blank");
 			bookPdfIcon.setAttribute("class","book-link");
 			bookPdfIcon.setAttribute("src","images\/pdf.png");
