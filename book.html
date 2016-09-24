@@ -4,6 +4,9 @@
 	<title>前端小站</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="styles/customer.css">
+	<script src="scripts/data.js"></script>
+	<script src="scripts/global.js"></script>
+	<script src="scripts/book.js"></script>
 </head>
 <body>
 <header>
@@ -18,8 +21,26 @@
 		<li><a href="#">联系</a></li>
 	</ul>
 </nav>
+<aside>
+	<div id="shelf" class="aside-pannel">		
+		<p>书架</p>
+	</div>
+
+	<div id="tool" class="aside-pannel">
+		<p>工具</p>
+		<ul>
+			<li>添加类别</li>
+			<li>删除类别</li>
+			<li>添加单册</li>
+		</ul>
+	</div>
+</aside>
 <section>
+	<div id="content"></div>
 	
+	<div id="up">
+		<a href="#" class="return-to-top"></a>
+	</div>
 </section>
 <footer>
 	Powered by Gao Yan &copy; 2016<br>

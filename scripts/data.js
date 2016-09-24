@@ -20,10 +20,7 @@ books = [
 		title2:"",
 		poster:"CSS实战手册.jpg",
 		like:3,
-		intro:[
-			"用浅显的语言和方式讲述正确的道理和方法",
-			"最好的入门书。看两遍就对HTML & CSS 有个大概印象了"
-			],
+		intro:[],
 		pdf:"CSS实战手册（第2版）.pdf",
 		library:"http://discovery.lib.bnu.edu.cn:8080/primo_library/libweb/action/display.do?tabs=detailsTab&ct=display&fn=search&doc=bnu_local_aleph_03000638685&indx=1&recIds=bnu_local_aleph_03000638685&recIdxs=0&elementId=0&renderMode=poppedOut&displayMode=full&frbrVersion=&dscnt=0&frbg=&tab=default_tab&dstmp=1474205699755&srt=rank&mode=Basic&&dum=true&search_scope=all_scope&tb=t&vl(1UIStartWith0)=contains&vl(freeText0)=CSS%E5%AE%9E%E6%88%98%E6%89%8B%E5%86%8C&vid=bnu_v1&vl(178815117UI0)=any&gathStatIcon=true"
 	},
@@ -53,8 +50,8 @@ books = [
 	},
 	{
 		cat:"HTML & CSS",
-		title:"精通CSS：高级web标准解决方案",
-		title2:"",
+		title:"精通CSS",
+		title2:"高级web标准解决方案",
 		poster:"精通CSS.jpg",
 		like:5,
 		intro:[
