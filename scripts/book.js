@@ -16,39 +16,16 @@ function initialShelf()
 	for (var i=0; i<cats.length; i++)
 	{
 		var shelfLi = document.createElement("li");
-		var shelfLiText = document.createTextNode(cats[i]);
-		shelfLi.onclick = handleShelfClick;
-		shelfLi.appendChild(shelfLiText);
+		shelfLi.appendChild(document.createTextNode(cats[i]));
 		shelfUl.appendChild(shelfLi);
+
+		// 每一个<li>的onclick。根据<li>中文本更新左侧content
+		shelfLi.onclick = function()
+		{
+			initialContent(this.firstChild.nodeValue)
+		};
 	}
 	shelf.appendChild(shelfUl);
-}
-
-/*
-	书架<ul>中每一个<li>的onclick。根据<li>中文本更新左侧content
-*/
-function handleShelfClick()
-{
-	// 重绘content
-	resetContent();
-	initialContent(this.firstChild.nodeValue);
-}
-
-/*
-	重置content
-*/
-function resetContent()
-{
-	// 先删掉content
-	var content = document.getElementById("content");
-	var parent = content.parentNode;
-	parent.removeChild(content);
-
-	// 再加上content
-	content = document.createElement("div");
-	content.setAttribute("id","content");
-	parent.insertBefore(content, parent.firstElementChild);
-
 }
 
 /*
@@ -56,6 +33,7 @@ function resetContent()
 */
 function createBookDiv(book)
 {
+	// 每本书的<div>分为左、右两部分
 	var bookDiv = document.createElement("div");
 	var bookLeftDiv = document.createElement("div");
 	var bookRightDiv = document.createElement("div");
@@ -63,20 +41,18 @@ function createBookDiv(book)
 	bookLeftDiv.setAttribute("class","book-left");
 	bookRightDiv.setAttribute("class","book-right");
 
-	// 左侧的封面
-	if (book.poster)
-	{
-		var bookRadius = document.createElement("div");
-		bookRadius.setAttribute("class", "book-radius");
+	// 左侧的圆角
+	var bookRadius = document.createElement("div");
+	bookRadius.setAttribute("class", "book-radius");
+	bookLeftDiv.appendChild(bookRadius);
 
-		var bookPoster = document.createElement("img");
-		bookPoster.setAttribute("class","book-poster");
-		bookPoster.setAttribute("src","images\/posters\/"+book.poster);
-		bookPoster.setAttribute("alt",book.title);
-
-		bookRadius.appendChild(bookPoster);
-		bookLeftDiv.appendChild(bookRadius);
-	}	
+	// 左侧的封面。若没提供封面，用默认的
+	var bookPoster = document.createElement("img");
+	var src = book.poster?("images\/posters\/"+book.poster):("images\/poster.jpg");
+	bookPoster.setAttribute("class","book-poster");
+	bookPoster.setAttribute("src",src);	
+	bookPoster.setAttribute("alt",book.title);
+	bookRadius.appendChild(bookPoster);	
 	
 	// 右侧的标题、副标题
 	if (book.title)
@@ -194,6 +170,7 @@ function initialContent(cat)
 
 	var content = document.getElementById("content");
 	content.className = cat;
+	content.innerHTML = "";
 	var fragment = document.createDocumentFragment();
 	var firstBook = true;
 
@@ -260,18 +237,10 @@ function handleAddCatOnclick()
 	form.action = "#";
 
 	// <form>包括一个输入框（输入类别名）、确认按钮、取消按钮
-	var inputBox = document.createElement("input");
-	var okButton = document.createElement("input");
-	var noButton = document.createElement("input");
-	inputBox.type = "text";
-	inputBox.name = "cat-name";
+	var inputBox = createInputForm("text","cat-name")
+	var okButton = createInputForm("button","confirm","确定")
+	var noButton = createInputForm("button","cancel","取消")	
 	inputBox.setAttribute("placeholder", "请输入类别名称")
-	okButton.type = "button";
-	okButton.name = "confirm";
-	okButton.value= "确定";
-	noButton.type = "button";
-	noButton.name = "cancel";
-	noButton.value= "取消";
 
 	// 输入框聚焦后，自动选择文本
 	inputBox.onfocus = function(){this.select();};
@@ -318,11 +287,15 @@ function handleAddCatOk()
 	// 向cats中加入新的类别名
 	cats.push(newName);
 
-	// 加入新类别名后，边栏的书架也要更新
+	// 加入类别名后，<input>要重置为空
+	inputBox.value = "";
+
+	// 加入新类别名后，边栏的书架也要更新,增加新类别的<li>
 	var shelf = document.getElementById("shelf");
 	var shelfUl = shelf.getElementsByTagName("ul")[0];
-	shelf.removeChild(shelfUl);
-	initialShelf();
+	var newLi = document.createElement("li");
+	newLi.appendChild(document.createTextNode(newName));
+	shelfUl.appendChild(newLi);
 }
 
 /*
@@ -338,23 +311,9 @@ function handleDelCatOnclick()
 	form.action = "#";
 
 	// <form>包括一个选择框（显示已有类别）、确认按钮、取消按钮
-	var selectBox = document.createElement("select");
-	var okButton = document.createElement("input");
-	var noButton = document.createElement("input");
-	selectBox.name = "cat-name";
-	okButton.type = "button";
-	okButton.name = "confirm";
-	okButton.value= "确定";
-	noButton.type = "button";
-	noButton.name = "cancel";
-	noButton.value= "取消";
-
-	// 从cats设置<select>的每个选项
-	for (var i=0; i<cats.length; i++)
-	{
-		var option = new Option(cats[i],cats[i]);
-		selectBox.appendChild(option);
-	}
+	var selectBox = createSelectForm("cat-name",cats);
+	var okButton = createInputForm("button","confirm","确定")
+	var noButton = createInputForm("button","cancel","取消")
 
 	// 为确认、取消按钮指定onclick。如果取消，只是删除<form>达到隐藏
 	okButton.onclick = handleDelCatOk;
@@ -383,26 +342,29 @@ function handleDelCatOk()
 		return;
 	}
 
-	// 获得选择框的选中项，即待删除的类别名，从cats中删除
+	// 从cats中删除该类别名。首先获得选择框的选中项，即待删除的类别
 	var selectBox = this.form["cat-name"];
 	var delCatName = selectBox.value;
-	removeByValue(cats, delCatName)
+	removeByValue(cats, delCatName);
 
 	// 删除类别名后，<select>要更新
-	selectBox.options.remove(selectBox.selectedIndex)
+	selectBox.options.remove(selectBox.selectedIndex);
 
-	// 删除类别名后，边栏的书架也要更新
+	// 删除类别名后，边栏的书架也要更新,找到该类别并删除
 	var shelf = document.getElementById("shelf");
-	var shelfUl = shelf.getElementsByTagName("ul")[0];
-	shelf.removeChild(shelfUl);
-	initialShelf();
+	var shelfLi = shelf.getElementsByTagName("li");
+	for (var i=0; i<shelfLi.length; i++)
+	{
+		if (delCatName == shelfLi.innerHTML)
+		{
+			shelfLi.parentNode.removeChild(shelfLi);
+		}
+	}
 	
 	// 如果恰巧删的类别，就是左侧图书所属的类别，则左侧也重绘
 	var content = document.getElementById("content");
-	var currentCat = content.className;
-	if (delCatName == currentCat)
+	if (delCatName == content.className)
 	{
-		resetContent();
 		initialContent(cats[0]);
 	}
 

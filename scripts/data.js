@@ -3,6 +3,20 @@ pdfFilesPath = "D:\/师大云盘\/web\/"
 books = [
 	{
 		cat:"HTML & CSS",
+		title:"此书用于测试！",
+		title2:"Test Book!",
+		poster:"",
+		like:1,
+		intro:[
+			"用浅显的语言和方式讲述正确的道理和方法",
+			"最好的入门书。看两遍就对HTML & CSS 有个大概印象了",
+			"用浅显的语言和方式讲述正确的道理和方法"
+			],
+		pdf:"测试书的PDF.pdf",
+		library:"http://www.bnu.edu.cn"
+	},
+	{
+		cat:"HTML & CSS",
 		title:"Head First HTML and CSS",
 		title2:"深入浅出HTML和CSS",
 		poster:"head_fist_html_and_css.jpg",
