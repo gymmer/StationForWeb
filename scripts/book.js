@@ -177,28 +177,10 @@ function initialContent(cat)
 	// 分别显示每一本属于cat类的书
 	for (var i=0; i<books.length; i++)
 	{
-		// 每本书创建一个<div>
 		var book = books[i];
 		if (book.cat != cat) continue;
 		var bookDiv = createBookDiv(book);
-
-		// 每两本书为1行
-		if (firstBook)
-		{
-			// 这是第一本书，创建一个row
-			var row = document.createElement("div");
-			row.setAttribute("class", "row");
-			bookDiv.classList.add("first");
-			firstBook = false;
-		}
-		else
-		{
-			// 这是第二本书，已经有row了，不用再创建新row
-			bookDiv.classList.add("second");
-			firstBook = true;
-		}
-		row.appendChild(bookDiv);
-		fragment.appendChild(row);	
+		fragment.appendChild(bookDiv);	
 	}
 	content.appendChild(fragment);
 

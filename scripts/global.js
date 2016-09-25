@@ -22,6 +22,29 @@ function addLoadEvent(func,args)
 }
 
 /*
+	window.onscroll 注册函数
+*/
+function addScrollEvent(func,args)
+{
+	var oldFunc = window.onscroll;
+	if (typeof window.onscroll != "function")
+	{
+		window.onscroll = function()
+		{
+			func(args);
+		}
+	}
+	else
+	{
+		window.onscroll = function()
+		{
+			oldFunc();
+			func(args);
+		}
+	}
+}
+
+/*
 	从数组arr中删除值为val的元素
 */
 function removeByValue(arr, val) 
@@ -57,7 +80,6 @@ function createForm(method,action,id)
 	return form;
 }
 	
-
 /*
 	创建一个<input>表单
 */
@@ -88,3 +110,48 @@ function createSelectForm(name,arr)
 	}
 	return select;
 }
+
+/*
+	弹性返回顶部
+	页面滚动条处于低端,点击回到顶部，并且隐藏掉
+	http://www.jb51.net/article/38228.htm
+*/
+function goToTop() 
+{ 
+	var obj = document.getElementById("go-to-top"); 
+
+	function getScrollTop() 
+	{ 
+		return document.documentElement.scrollTop + document.body.scrollTop; 
+	} 
+
+	function setScrollTop(value) 
+	{ 
+		if (document.documentElement.scrollTop) 
+		{ 
+			document.documentElement.scrollTop = value; 
+		} 
+		else 
+		{ 
+			document.body.scrollTop = value; 
+		} 
+	} 
+
+	function handleWindowScroll()
+	{
+		getScrollTop() > 0 ? obj.style.display = "block": obj.style.display = "none"; 
+	}
+
+	addScrollEvent(handleWindowScroll);
+	obj.onclick = function() 
+	{ 
+		var goTop = setInterval(scrollMove, 10); 
+		function scrollMove() 
+		{ 
+			setScrollTop(getScrollTop() / 1.1); 
+			if (getScrollTop() < 1) clearInterval(goTop); 
+		} 
+	} 
+}
+
+addLoadEvent(goToTop);

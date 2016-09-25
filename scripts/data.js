@@ -1,4 +1,4 @@
-﻿cats = ["测试目录","HTML & CSS", "JavaScript", "jQuery", "Node.js", "HTTP & Web"];
+﻿cats = ["HTML & CSS", "JavaScript", "jQuery", "Node.js", "HTTP & Web","测试目录"];
 pdfFilesPath = "D:\/师大云盘\/web\/"
 books = [
 	{
