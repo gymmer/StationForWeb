@@ -47,6 +47,17 @@ function isNotEmptyString(str)
 	}
 }
 
+// 创建<form>
+function createForm(method,action,id)
+{
+	var form = document.createElement("form");
+	if (isNotEmptyString(method)) 		form.method = method;
+	if (isNotEmptyString(action)) 		form.action = action;
+	if (isNotEmptyString(id))			form.id = id;
+	return form;
+}
+	
+
 /*
 	创建一个<input>表单
 */

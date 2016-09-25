@@ -201,6 +201,20 @@ function initialContent(cat)
 		fragment.appendChild(row);	
 	}
 	content.appendChild(fragment);
+
+
+	// 如果该类别没有书，给出提示信息
+	if (!content.innerHTML)
+	{
+		content.innerHTML = '<p class="no-book">尚无'+cat+'类的图书<br>在工具箱中添加单册吧！</p>';
+		
+		//添加一个按钮（添加单册）。这个按钮和工具->添加单册的<li>共享onclick，
+		var form = createForm("post","#");
+		var button = createInputForm("button","add-single","添加单册")
+		button.onclick = handleAddSingleOnclick;
+		form.appendChild(button);
+		content.appendChild(form);
+	}
 }
 
 /*
@@ -231,12 +245,8 @@ function handleAddCatOnclick()
 {
 	hideCatPanel();
 
-	// 创建<form>
-	var form = document.createElement("form");
-	form.method = "post";
-	form.action = "#";
-
-	// <form>包括一个输入框（输入类别名）、确认按钮、取消按钮
+	// 创建<form>，包括一个输入框（输入类别名）、确认按钮、取消按钮
+	var form = createForm("post","#");
 	var inputBox = createInputForm("text","cat-name")
 	var okButton = createInputForm("button","confirm","确定")
 	var noButton = createInputForm("button","cancel","取消")	
@@ -295,6 +305,10 @@ function handleAddCatOk()
 	var shelfUl = shelf.getElementsByTagName("ul")[0];
 	var newLi = document.createElement("li");
 	newLi.appendChild(document.createTextNode(newName));
+	newLi.onclick = function()
+	{
+		initialContent(this.firstChild.nodeValue)
+	};
 	shelfUl.appendChild(newLi);
 }
 
@@ -305,12 +319,8 @@ function handleDelCatOnclick()
 {
 	hideCatPanel();
 
-	// 创建<form>
-	var form = document.createElement("form");
-	form.method = "post";
-	form.action = "#";
-
-	// <form>包括一个选择框（显示已有类别）、确认按钮、取消按钮
+	// 创建<form>,包括一个选择框（显示已有类别）、确认按钮、取消按钮
+	var form = createForm("post","#");
 	var selectBox = createSelectForm("cat-name",cats);
 	var okButton = createInputForm("button","confirm","确定")
 	var noButton = createInputForm("button","cancel","取消")
@@ -335,10 +345,10 @@ function handleDelCatOnclick()
 */
 function handleDelCatOk()
 {
-	// 如果已经没有类别了，就不必做以下了
+	// 如果已经没有类别了，没有必要做其他了
 	if (cats.length==0) 
 	{
-		alert("已经将所有类别都删光啦！")
+		alert("已经将所有类别都删光啦！");
 		return;
 	}
 
@@ -352,10 +362,11 @@ function handleDelCatOk()
 
 	// 删除类别名后，边栏的书架也要更新,找到该类别并删除
 	var shelf = document.getElementById("shelf");
-	var shelfLi = shelf.getElementsByTagName("li");
-	for (var i=0; i<shelfLi.length; i++)
+	var shelfLiItems = shelf.getElementsByTagName("li");
+	for (var i=0; i<shelfLiItems.length; i++)
 	{
-		if (delCatName == shelfLi.innerHTML)
+		var shelfLi = shelfLiItems[i];
+		if (delCatName == shelfLi.firstChild.nodeValue)
 		{
 			shelfLi.parentNode.removeChild(shelfLi);
 		}
@@ -366,6 +377,12 @@ function handleDelCatOk()
 	if (delCatName == content.className)
 	{
 		initialContent(cats[0]);
+	}
+
+	// 如果删完这个类别，cats空了，左侧content给出提示信息
+	if (cats.length==0) 
+	{
+		content.innerHTML = '<p class="no-book">已经将所有类别都删光啦！<br>在工具箱中添加书目吧！</p>';
 	}
 
 	/*
@@ -380,7 +397,7 @@ function handleDelCatOk()
 function handleAddSingleOnclick()
 {
 	hideCatPanel();
-
+	alert("请添加单册！");
 	/*
 
 	添加新内容
@@ -398,6 +415,6 @@ function hideCatPanel()
 	catPanel.parentNode.removeChild(catPanel);
 }
 
-addLoadEvent(initialContent,"HTML & CSS");
+addLoadEvent(initialContent,cats[0]);
 addLoadEvent(initialShelf);
 addLoadEvent(addToolBoxEvent);
