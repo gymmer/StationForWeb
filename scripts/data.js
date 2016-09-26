@@ -32,7 +32,7 @@ books = [
 		cat:"HTML & CSS",
 		title:"CSS实战手册",
 		title2:"",
-		poster:"CSS实战手册.jpg",
+		poster:"CSSshizhanshouce.jpg",
 		like:3,
 		intro:[],
 		pdf:"CSS实战手册（第2版）.pdf",
@@ -42,7 +42,7 @@ books = [
 		cat:"HTML & CSS",
 		title:"CSS权威指南",
 		title2:"CSS, The Definitive Guide",
-		poster:"CSS权威指南.jpg",
+		poster:"CSSquanweizhinan.jpg",
 		like:4,
 		intro:[
 		"Meyer可能是css领域最权威和知名的作者，他在这本书里讲解了每个细节的实现和原理，更详细的东西恐怕只能从w3c那几乎不可读的文档中去寻找了",
@@ -54,7 +54,7 @@ books = [
 		cat:"HTML & CSS",
 		title:"CSS禅意花园",
 		title2:"",
-		poster:"CSS禅意花园.jpg",
+		poster:"CSSchanyihuayuan.jpg",
 		like:4,
 		intro:[
 		"提高自己的艺术设计能力，通过实例来学习如何用CSS设计出漂亮的页面",
@@ -66,7 +66,7 @@ books = [
 		cat:"HTML & CSS",
 		title:"精通CSS",
 		title2:"高级web标准解决方案",
-		poster:"精通CSS.jpg",
+		poster:"jingtongCSS.jpg",
 		like:5,
 		intro:[
 		"广受前辈推荐的一本书。上一本书是字典的话，这本书相当于《中学生作文大全》，汇集了一些CSS的最佳实践。",
@@ -78,7 +78,7 @@ books = [
 		cat:"JavaScript",
 		title:"JavaScript权威指南",
 		title2:"Javascript, The Definitive Guide",
-		poster:"JavaScript权威指南.jpg",
+		poster:"JavaScriptquanweizhinan.jpg",
 		like:5,
 		intro:[
 		"淘宝前端团队翻译的，看译者列表都是一堆大神。这本书又叫犀牛书，号称javascript开发者的圣经，网上对此书评价很多，大概意思都是说这本书是一本JavaScript文档手册，没有完整看过一遍此书的都不能算是一名合格的前端工程师。 这本书还是写得枯燥了些，不过内容绝对是五颗星，无可挑剔！",
@@ -90,7 +90,7 @@ books = [
 		cat:"JavaScript",
 		title:"JavaScript高级程序设计",
 		title2:"Professional JavaScript for Web Developers",
-		poster:"JavaScript高级程序设计.jpg",
+		poster:"JavaScriptgaojichengxu.jpg",
 		like:5,
 		intro:[
 		"又称红宝书，雅虎首席前端架构师，YUI的作者Zakas出品。虽然书名带了“高级”二字，但是讲得也很基础，而且行文风格很流畅，每一小节就像是一篇博客，读起来并不枯燥，个人感觉比上面那本犀牛书可读性更强。",
@@ -102,7 +102,7 @@ books = [
 		cat:"JavaScript",
 		title:"JavaScript DOM编程艺术",
 		title2:"DOM Scripting: Web Design with JavaScript and the Document Object Model",
-		poster:"JavaScript DOM编程艺术.jpg",
+		poster:"JavaScript DOMbianchengyishu.jpg",
 		like:5,
 		intro:["最好的JS入门书籍，一目了然地告诉你如何用JS操作DOM（这是浏览器端编程的基本功），还灌输了最符合标准的编程理念。"],
 		pdf:"JavaScript DOM编程艺术（第1版）.pdf",
@@ -112,7 +112,7 @@ books = [
 		cat:"JavaScript",
 		title:"JavaScript语言精粹",
 		title2:"Javascipt, The Good Parts",
-		poster:"JavaScript语言精粹.jpg",
+		poster:"JavaScriptyuyanjingcui.jpg",
 		like:4,
 		intro:[
 		"也是前端必看。薄薄一百来页，对JS的去粗取精。",
@@ -124,7 +124,7 @@ books = [
 		cat:"JavaScript",
 		title:"编写可维护的JavaScript",
 		title2:"Maintainable JavaScript",
-		poster:"编写可维护的JavaScript.jpg",
+		poster:"bianxiekeweiJavaScript.jpg",
 		like:3,
 		intro:[
 		"又一本Zakas的书，还没读完，基本上是zakas那本红宝书的子集，重点是javascript代码风格、规范以及最佳实践。"],
@@ -135,7 +135,7 @@ books = [
 		cat:"JavaScript",
 		title:"JavaScript设计模式",
 		title2:"Learning JavaScript Design Patterns",
-		poster:"JavaScript设计模式.jpg",
+		poster:"JavaScriptshejimoshi.jpg",
 		like:2,
 		intro:[
 		"作者似乎很偏爱JQuery的源码，不过这本书tom大叔翻译的很烂，代码也很多没有缩进。。。 不推荐。",
@@ -147,7 +147,7 @@ books = [
 		cat:"JavaScript",
 		title:"高性能JavaScript",
 		title2:"High Performance JavaScript",
-		poster:"高性能JavaScript.jpg",
+		poster:"gaoxingnengJavaScript.jpg",
 		like:3,
 		intro:["Zakas大神的又一本神书，高工推荐的。"],
 		pdf:"",
@@ -167,7 +167,7 @@ books = [
 		cat:"JavaScript",
 		title:"JAVASCRIPT语言精髓与编程实践",
 		title2:"",
-		poster:"JAVASCRIPT语言精髓与编程实践.jpg",
+		poster:"JAVASCRIPTyuyanjingsui.jpg",
 		like:4,
 		intro:[
 		"一本讲JavaScript的硬书，以JavaScript这门语言为栗子，讲述编程语言的特性（动态语言、函数式编程、面向对象编程等等）。作者周爱民老师是前支付宝架构师，现豌豆荚架构师。"],
@@ -178,7 +178,7 @@ books = [
 		cat:"JavaScript",
 		title:"JavaScript编程精解",
 		title2:"",
-		poster:"JavaScript编程精解.jpg",
+		poster:"JavaScriptbianchengjingjie.jpg",
 		like:2,
 		intro:[
 		"看起来比较吃力，第五章函数式编程和第六章的面向对象编程很多都没看懂。全书游戏式的编程教程还是很有意思的。个人认为初学者并不合适看这本书入门，作者在代码示例中不自觉得使用了一些高级用法，初学者看容易晕菜。",
@@ -190,7 +190,7 @@ books = [
 		cat:"jQuery",
 		title:"JQuery权威指南",
 		title2:"",
-		poster:"JQuery权威指南.jpg",
+		poster:"JQueryquanweizhinan.jpg",
 		like:4,
 		intro:[
 		"错误很多啊，不过其中的语法+示例的形式，确实很适合初学者。但是错误实在太多了，而且有些语句还不通顺，看着很累啊，只能说写得好代码的人，书不一定写得好。"],
@@ -201,7 +201,7 @@ books = [
 		cat:"jQuery",
 		title:"锋利的jQuery",
 		title2:"",
-		poster:"锋利的jQuery.jpg",
+		poster:"fenlidejQuery.jpg",
 		like:5,
 		intro:[
 		"讲JS最著名的库——jQuery的，快速入门的书。光会原生JS不够，还要会用库。"],
@@ -212,7 +212,7 @@ books = [
 		cat:"HTTP & Web",
 		title:"高性能网站建设指南",
 		title2:"前端工程师技能精髓",
-		poster:"高性能网站建设指南.jpg",
+		poster:"gaoxingnengwanzhan1.jpg",
 		like:5,
 		intro:["告诉你真正的商业公司的前端是怎么优化一个网站的。当然优化的问题不是看看书就能解决的，最好时刻了解你的同行们的经验。"],
 		pdf:"高性能网站建设指南+前端工程师技能精髓.pdf",
@@ -222,7 +222,7 @@ books = [
 		cat:"HTTP & Web",
 		title:"高性能网站建设进阶指南",
 		title2:"WEB开发者性能优化最佳实践",
-		poster:"高性能网站建设进阶指南.jpg",
+		poster:"gaoxingnengwanzhan2.jpg",
 		like:3,
 		intro:[],
 		pdf:"高性能网站建设进阶指南+WEB开发者性能优化最佳实践.pdf",
@@ -232,7 +232,7 @@ books = [
 		cat:"HTTP & Web",
 		title:"HTTP权威指南",
 		title2:"",
-		poster:"HTTP权威指南.jpg",
+		poster:"HTTPquanweizhinan.jpg",
 		like:4,
 		intro:[
 		"涉及web开发的前端、后台、运维的同学都可以看看。web应用架构师必看。其中对其中“缓存”、“负载均衡“等章节印象很深，标准的教科书啊，肯定比看枯燥的HTTP规范好多了。",
@@ -244,7 +244,7 @@ books = [
 		cat:"HTTP & Web",
 		title:"Web性能权威指南",
 		title2:"",
-		poster:"Web性能权威指南.jpg",
+		poster:"Webxingnengquanwei.jpg",
 		like:3,
 		intro:[
 		"Google工程师教你优化web性能，刚看了个开头，高工推荐，听说讲得比较深。"],
@@ -255,7 +255,7 @@ books = [
 		cat:"HTTP & Web",
 		title:"图解HTTP",
 		title2:"",
-		poster:"图解HTTP.png",
+		poster:"tujieHTTP.png",
 		like:5,
 		intro:[
 		"算是科普读物吧"],
@@ -266,7 +266,7 @@ books = [
 		cat:"Node.js",
 		title:"了不起的Node.js",
 		title2:"",
-		poster:"了不起的Node.js.jpg",
+		poster:"liaobuqideNode.js.jpg",
 		like:4,
 		intro:[
 		"作为NodeJS入门挺好的一本书，可惜讲得太浅了，基本上就是介绍开发一个简单的NodeJS应用所要用到的一些技术和工具，对里面的原理以及NodeJS本身没有做太多的介绍，停留在介绍第三方库及其API的阶段。"],
@@ -277,7 +277,7 @@ books = [
 		cat:"Node.js",
 		title:"Node.js开发指南",
 		title2:"",
-		poster:"Node.js开发指南.jpg",
+		poster:"Node.jskaifazhinan.jpg",
 		like:4,
 		intro:[
 		"理解了NodeJS的事件循环。作者是大神啊。"],
@@ -288,7 +288,7 @@ books = [
 		cat:"Node.js",
 		title:"深入浅出Node.js",
 		title2:"",
-		poster:"深入浅出Node.js.jpg",
+		poster:"shenruqianchuNode.js.jpg",
 		like:5,
 		intro:[
 		"很出名的一本书，对NodeJS的一些原理做了深入介绍，挺不错的，还没看完。"],
