@@ -26,7 +26,7 @@
 
 ### ***关于网站***  
 - 基于：HTML+CSS+JavaScript   
-- GitHub源码：[开发测试版](https://github.com/gymmer/StationForWeb_debug)，[发行版](https://github.com/gymmer/StationForWeb_release)  
+- 源码：[GitHub](https://github.com/gymmer/StationForWeb)  
 - 功能：
   - 目前已实现了图书推荐  
   - 添加、删除类别后刷新浏览器不会保存  
