@@ -188,11 +188,12 @@ function initialContent(cat)
 	// 如果该类别没有书，给出提示信息
 	if (!content.innerHTML)
 	{
-		content.innerHTML = '<p class="no-book">尚无'+cat+'类的图书<br>在工具箱中添加单册吧！</p>';
+		content.innerHTML = '<p class="no-book-intro">尚无'+cat+'类的图书<br>在工具箱中添加单册吧！</p>';
 		
 		//添加一个按钮（添加单册）。这个按钮和工具->添加单册的<li>共享onclick，
 		var form = createForm("post","#");
-		var button = createInputForm("button","add-single","添加单册")
+		var button = createInputForm("button","add-single","添加单册");
+		button.className = "no-book-button";
 		button.onclick = handleAddSingleOnclick;
 		form.appendChild(button);
 		content.appendChild(form);
@@ -364,7 +365,7 @@ function handleDelCatOk()
 	// 如果删完这个类别，cats空了，左侧content给出提示信息
 	if (cats.length==0) 
 	{
-		content.innerHTML = '<p class="no-book">已经将所有类别都删光啦！<br>在工具箱中添加书目吧！</p>';
+		content.innerHTML = '<p class="no-book-intro">已经将所有类别都删光啦！<br>在工具箱中添加书目吧！</p>';
 	}
 
 	/*
@@ -379,7 +380,7 @@ function handleDelCatOk()
 function handleAddSingleOnclick()
 {
 	hideCatPanel();
-	alert("请添加单册！");
+	alert("程序员正在开发这个功能，\n\n命本对话框先来占坑~~\n");
 	/*
 
 	添加新内容

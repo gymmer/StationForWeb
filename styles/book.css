@@ -90,6 +90,7 @@ p.no-book-intro{
 	left: 110px;
 	position: absolute;
 }
+input.no-book-button{
 	width: 100px;
 	height: 40px;
 	top: 130px;
