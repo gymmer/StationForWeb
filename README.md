@@ -7,6 +7,23 @@
 
 ---
 
+### ***关于页***  
+也许你在问，这个`关于页`怎么这么丑。  
+事实是：这是**在HTML中内嵌了Markdown！**  
+[Strapdown.js](http://strapdownjs.com/)为我们提供了这样的解决方案，使基于Markdown编写网页极其便利。  
+所以，我偷了一个懒：  
+
+- 在`about.html`中`body`标签中，添加了一个`xmp`标签  
+- 把GitHub上的`README.md`文本直接copy到了的`xmp`标签内  
+- 在`body`结束前引入了[`strapdown.js`](http://strapdownjs.com/v/0.2/strapdown.js)  
+- 保存文件，刷新浏览器  
+- 好吧，我承认strapdown.js的默认CSS，稍稍打乱了网站的风格。
+  
+***So Perfect!***
+
+---
+
+
 ### ***关于网站***  
 - 基于：HTML+CSS+JavaScript   
 - GitHub源码：[开发测试版](https://github.com/gymmer/StationForWeb_debug)，[发行版](https://github.com/gymmer/StationForWeb_release)  
@@ -31,7 +48,8 @@
 - 返回顶部功能：[一个简单的弹性返回顶部JS代码实现介绍](http://www.jb51.net/article/38228.htm)  
 - 页脚设计：[北邮人论坛](https://bbs.byr.cn/)  
 - 书籍PDF：[W3Cfuns](http://www1.w3cfuns.com/feres.php?do=picture&listtype=book)
-- 书籍的图书馆资源：[北京师范大学图书馆](http://www.lib.bnu.edu.cn/)
+- 书籍的图书馆资源：[北京师范大学图书馆](http://www.lib.bnu.edu.cn/)  
+- 关于页设计：[Strapdown.js](http://strapdownjs.com/)  
 
 ---
 
@@ -43,4 +61,4 @@
 
 ### ***关于我***  
 - 我的社区：[GitHub](https://github.com/gymmer)，[博客园](http://www.cnblogs.com/gymmer/)  
-- E-mail: gaoyan@mail.bnu.edu.cn  
+- E-mail: <gaoyan@mail.bnu.edu.cn>  
