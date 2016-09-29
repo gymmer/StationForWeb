@@ -1,0 +1,124 @@
+/* book div */
+div.book{
+	margin: 10px 10px;
+	background-color: #F0F0F0;
+	border-bottom: 2px solid #E0E0E0;
+	border-right: 2px solid #E0E0E0;
+	border-radius: 5px;
+	width: 400px;
+	height: 200px;
+	position: relative;
+	float: left;
+}
+div.book:hover{
+	box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.20);
+}
+div.book-left{
+	width: 50%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+div.book-right{
+	width: 50%;
+	position: absolute;
+	left: 200px;
+	top: 0;
+}
+div.book-radius{
+	width: 150px;
+	height: 150px;
+	margin: 25px auto;
+	border-radius: 75px;
+	background-color: #FFF;
+	text-align: center;
+}
+img.book-poster{
+	width: 80px;
+	height: 107px;
+	margin: 20px;
+}
+p.book-title{
+	color: #243240;
+	font-family: "黑体","Helvetica","Arial",sans-serif;
+	font-size: 1.4em;
+	line-height: 1.5em;
+	font-weight: bold;
+	margin: 8px 0;
+}
+p.book-title2{
+	font-family: "楷体","Helvetica","Arial",sans-serif;
+	font-size: 1em;
+	font-weight: normal;
+	margin: 0 0 4px 0;
+}
+img.book-like{
+	display: block;
+	margin: 10px 0 30px 0;
+}
+img.icon{
+	height: 30px;
+	margin-right: 10px;
+}
+.book-right a{
+	text-decoration: none;
+}
+ul.book-intro{
+	display: none;
+	list-style: circle;
+	line-height: 1.5em;
+	margin: 0;
+	padding: 10px 10px 10px 30px;
+	width: 250px;
+	background-color: rgba(36,50,64,0.9);
+	color: #FFF;
+	position: relative;
+	left: 10px;
+	top: 10px;
+	float: left;
+	z-index: 8;
+}
+ul.book-intro q::before, 
+ul.book-intro q::after{
+	content:none;
+}
+p.no-book-intro{
+	font-family: "华文新魏","Arial",sans-serif;
+	font-size: 2em;
+	line-height: 1.5em;
+	top: 0;
+	left: 110px;
+	position: absolute;
+}
+	width: 100px;
+	height: 40px;
+	top: 130px;
+	left: 200px;
+	position: absolute;
+}
+/* sidebar */
+#cat-panel:hover{
+	background-color: #F0F0F0;
+	cursor: auto;
+}
+#cat-panel input[type="text"],
+#cat-panel select{
+	height: 30px;
+	width: 150px;
+}
+#cat-panel input[type=button]{
+	width: 60px;
+	height: 30px;
+	margin: 10px 10px 0 10px;
+}
+input[type=button]{
+	border-radius: 5px;
+	background-color: #DDD;
+	color: #444;
+}
+input[type=button]:hover{
+	cursor: pointer;
+	background-color: #CCC;
+	box-shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.20);
+	color: #000;
+}

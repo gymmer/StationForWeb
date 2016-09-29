@@ -45,6 +45,61 @@ function addScrollEvent(func,args)
 }
 
 /*
+	初始化导航栏
+*/
+function initialNav()
+{
+	if(!document.getElementsByTagName) return false;
+	if(!document.getElementsByTagName("nav")) return false;
+	if(!document.createElement) return false;
+
+	var nav = document.getElementsByTagName("nav")[0];
+	var navUl = document.createElement("ul");
+
+	navUl.addItem = function(fileName, text)
+	{
+		var li = document.createElement("li");
+		var link = document.createElement("a");
+		var linkText = document.createTextNode(text);
+		link.setAttribute("href", fileName+".html");
+		link.appendChild(linkText);
+		li.appendChild(link);
+		this.appendChild(li)
+	}
+
+	navUl.addItem("index","首页");
+	navUl.addItem("book","书籍");
+	navUl.addItem("about","关于");
+	nav.appendChild(navUl);
+}
+
+/*
+	初始化页脚
+*/
+function initialFooter()
+{
+	if (!document.getElementsByTagName) return false;
+	if (!document.getElementsByTagName("footer")) return false;
+	if (!document.createElement) return false;
+
+	var footer = document.getElementsByTagName("footer")[0];
+	var footDiv = document.createElement("div");
+	footDiv.setAttribute("id","foot-div");
+
+	var link = document.createElement("a");
+	var footImg = document.createElement("img");
+	link.setAttribute("href","index.html");
+	footImg.setAttribute("src","images/logo.png");
+	link.appendChild(footImg);
+
+	var copyright = document.createElement("span");
+	copyright.innerHTML = "Powered by Gao Yan &copy; 2016<br>All rights reserved";
+
+	footDiv.appendChild(link);
+	footDiv.appendChild(copyright);
+	footer.appendChild(footDiv);
+}
+/*
 	从数组arr中删除值为val的元素
 */
 function removeByValue(arr, val) 
@@ -155,3 +210,5 @@ function goToTop()
 }
 
 addLoadEvent(goToTop);
+addLoadEvent(initialNav);
+addLoadEvent(initialFooter);
