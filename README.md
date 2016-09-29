@@ -29,6 +29,7 @@
 - 顶部Logo图片：百度图片  
 - 返回顶部图标：[百度百科词条](http://baike.baidu.com/link?url=E6EcJ_RuJZYQvftPOK4L7x-LKbJL3QJhX1-tBMHvx-X75E0UIuOEh7qi1n8beb5zQFJm9eUhTKvuWh_g478Nr_)  
 - 返回顶部功能：[一个简单的弹性返回顶部JS代码实现介绍](http://www.jb51.net/article/38228.htm)  
+- 页脚设计：[北邮人论坛](https://bbs.byr.cn/)  
 - 书籍PDF：[W3Cfuns](http://www1.w3cfuns.com/feres.php?do=picture&listtype=book)
 - 书籍的图书馆资源：[北京师范大学图书馆](http://www.lib.bnu.edu.cn/)
 

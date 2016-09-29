@@ -1,5 +1,5 @@
 ﻿cats = ["HTML & CSS", "JavaScript", "jQuery", "Node.js", "HTTP & Web","测试目录"];
-pdfFilesPath = "D:\/师大云盘\/web\/"
+pdfFilesPath = "F:\/师大云盘\/web\/"
 books = [
 	{
 		cat:"HTML & CSS",
