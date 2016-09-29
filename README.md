@@ -17,7 +17,7 @@
 - 把GitHub上的`README.md`文本直接copy到了的`xmp`标签内  
 - 在`body`结束前引入了[`strapdown.js`](http://strapdownjs.com/v/0.2/strapdown.js)  
 - 保存文件，刷新浏览器  
-- 好吧，我承认strapdown.js的默认CSS，稍稍打乱了网站的风格。
+- 好吧，我承认strapdown.js的默认CSS，稍稍打乱了网站的风格，也拖慢了本页的加载速度。  
   
 ***So Perfect!***
 
