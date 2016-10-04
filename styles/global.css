@@ -66,6 +66,7 @@ aside ul{
 aside li{
 	border-bottom: 1px #DFDFDF solid;
 	background-color: #F0F0F0;
+	transition: background-color 0.2s;
 	padding: 15px 0;
 	font-size: 1.2em;
 	color: #444;

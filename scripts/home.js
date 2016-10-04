@@ -2,8 +2,34 @@ var imgWidth = 1000;
 var titleLeftDist = 40;
 var titleTopDist = 50;
 var autoSlideIntervaval = 3000;
-var arrowBoxTop = 200;
-var arrowBoxWidth = 40;
+
+var slider = [
+  {
+    img:"1.jpg",
+    intro:"前端小站--分享前端资源",
+    link:"index.html"
+  },
+  {
+    img:"2.jpg",
+    intro:"没错，画的就是你",
+    link:"about.html"
+  },
+  {
+    img:"3.jpg",
+    intro:"纸上得来终觉浅，绝知此事要躬行",
+    link:"book.html"
+  },
+  {
+    img:"4.jpg",
+    intro:"巨人的肩膀这么多，站谁身上好呢",
+    link:"recommend.html"
+  },
+  {
+    img:"5.jpg",
+    intro:"我不生产代码，我只是GitHub的搬运工",
+    link:"https://github.com/gymmer/StationForWeb"
+  }
+]
 
 function moveElement(elementID,final_x,final_y,interval) {
   if (!document.getElementById) return false;
@@ -86,15 +112,13 @@ function initialSlider()
     // 上一张
     var pre = document.createElement("div");
     pre.setAttribute("id","pre");
-    pre.style.left = (-arrowBoxWidth)+"px";
-    pre.style.top = arrowBoxTop+"px";
+    pre.style.left = (-40)+"px";
     pre.innerHTML = "<span class='arrow'>‹</span>";
 
     // 下一张
     var next = document.createElement("div");
     next.setAttribute("id","next");
-    next.style.left = imgWidth+"px";
-    next.style.top = arrowBoxTop+"px";
+    next.style.right = (-40)+"px";
     next.innerHTML = "<span class='arrow'>›</span>";
 
     // 追加到DOM
@@ -210,15 +234,15 @@ function addSliderMovement()
   slider.onmouseover = function()
   {
     clearInterval(timer);
-    moveElement("pre",40,arrowBoxTop,2);
-    moveElement("next",imgWidth-arrowBoxWidth-40,arrowBoxTop,2);
+    pre.style.left = "40px";
+    next.style.right = "40px"
   }
   // 鼠标离开组件， 恢复轮播，隐藏上一张/下一张
   slider.onmouseout = function()
   {
     timer = setInterval(slideToNext,autoSlideIntervaval);
-    moveElement("pre",-arrowBoxWidth,arrowBoxTop,2);
-    moveElement("next",imgWidth,arrowBoxTop,2);
+    pre.style.left = "-40px";
+    next.style.right = "-40px";
   }
 
   // 每个导航点的onclick

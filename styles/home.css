@@ -7,6 +7,7 @@
 	border-radius: 5px;
 	box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.20);
 }
+/* 轮播图片 */
 #slider-img img{
 	position: absolute;
 	z-index: 1;
@@ -14,6 +15,7 @@
 #slider-img a{
 	font-family: "华文新魏","Helvetica","Arial",sans-serif;
 	background-color: rgba(0,0,0,0.6);
+	transition: background-color 0.5s;
 	color: #FFF;
 	text-decoration: none;
 	font-size: 2em;
@@ -24,15 +26,26 @@
 	position: absolute;
 	z-index: 3;
 }
+#slider-img a:hover{
+	background-color: rgba(0,0,0,0.7);
+}
+/* 轮播上一页/下一页 */
 #pre,#next{
 	width: 40px;
 	height: 40px;
 	background-color: rgba(0,0,0,0.5);
-	border-radius: 25px;
+	border-radius: 20px;
 	font-size: 4em;
 	color: #AAA;
 	position: absolute;
+	top: 175px;
 	z-index: 4;
+}
+#pre{
+	transition: background-color 0.2s, color 0.2s, left 0.3s
+}
+#next{
+	transition: background-color 0.2s, color 0.2s, right 0.3s;
 }
 #pre:hover,
 #next:hover{
@@ -40,11 +53,18 @@
 	background-color: rgba(0,0,0,0.8);
 	color: #FFF;
 }
-#slider-index .arrow{
+#pre .arrow,
+#next .arrow{
 	position: absolute;
-	left: 11px;
-	top: 9px;
+	top: 7px;
 }
+#pre .arrow{
+	left: 10px;
+}
+#next .arrow{
+	right: 8px;
+}
+/* 轮播导航点 */
 #slider-dot{
 	position: absolute;
 	left: 50%;

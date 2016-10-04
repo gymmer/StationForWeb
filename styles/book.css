@@ -9,6 +9,7 @@ div.book{
 	height: 200px;
 	position: relative;
 	float: left;
+	transition: box-shadow 0.1s;
 }
 div.book:hover{
 	box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.20);

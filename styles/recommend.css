@@ -37,6 +37,7 @@ div.recommend{
 	font-size: 1.3em;
 	color: #1F1BA6;
 }
+/* 字体图标 */
 .recommend li a:before,
 .recommend h1:before{
 	font-family:FontAwesome;
