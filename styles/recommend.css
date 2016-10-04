@@ -1,0 +1,63 @@
+div.recommend{
+	width: 400px;
+	float: left;
+	background-color: #F0F0F0;
+	margin: 15px 15px;
+}
+.recommend h1{
+	font-family: "黑体","Helvetica","Arial",sans-serif;
+	background-color: #1D2833;
+	color: #FFF;
+	margin: 0 auto;
+	line-height: 2em;
+	text-align: center;
+	border-radius: 5px 5px 0 0;
+}
+.recommend ul{
+	list-style: none;
+	margin: 0;
+	padding: 15px 40px 0 40px;
+	border-right: 2px solid #E0E0E0;
+	border-bottom: 2px solid #E0E0E0;
+}
+.recommend li{	
+	border-bottom: 1px solid #DDD;
+}
+.recommend li:last-child{
+	border-bottom: 0;
+}
+.recommend li a{
+	font-size: 1.1em;
+	line-height: 30px;
+	display: block;
+	text-decoration: none;
+	color: #000303;
+}
+.recommend li a:hover{
+	font-size: 1.3em;
+	color: #1F1BA6;
+}
+.recommend li a:before,
+.recommend h1:before{
+	font-family:FontAwesome;
+	display: inline;
+	margin-right: 1em;
+	font-size: 1em;
+	font-weight: normal;
+}
+.recommend li a:before{
+	font-size: 0.8em;
+	content: "\f105";
+}
+#refer-book h1:before{
+	content: "\f02d"
+}
+#tech-teaching h1:before{
+	content: "\f126"
+}
+#recommend-web h1:before{
+	content: "\f109"
+}
+#experience h1:before{
+	content: "\f040"
+}

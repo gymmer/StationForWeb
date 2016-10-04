@@ -69,6 +69,7 @@ function initialNav()
 
 	navUl.addItem("index","首页");
 	navUl.addItem("book","书籍");
+	navUl.addItem("recommend","推荐");
 	navUl.addItem("about","关于");
 	nav.appendChild(navUl);
 }

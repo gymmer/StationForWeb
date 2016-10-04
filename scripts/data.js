@@ -60,7 +60,7 @@ books = [
 		"提高自己的艺术设计能力，通过实例来学习如何用CSS设计出漂亮的页面",
 		"侧重web UI的css创意化实现"],
 		pdf:"CSS禅意花园.pdf",
-		library:"http://www.csszengarden.com/"
+		library:""
 	},
 	{
 		cat:"HTML & CSS",
@@ -296,3 +296,20 @@ books = [
 		library:"http://discovery.lib.bnu.edu.cn:8080/primo_library/libweb/action/display.do?tabs=detailsTab&ct=display&fn=search&doc=bnu_local_aleph_03000808099&indx=1&recIds=bnu_local_aleph_03000808099&recIdxs=0&elementId=0&renderMode=poppedOut&displayMode=full&frbrVersion=&dscnt=0&scp.scps=scope%3A%28%22PRIMO%22%29%2Cscope%3A%28BNU%29%2Cprimo_central_multiple_fe&frbg=&tab=default_tab&dstmp=1474249293489&srt=rank&mode=Basic&&dum=true&tb=t&vl(1UIStartWith0)=contains&vl(freeText0)=%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BANode.js&vid=bnu_v1&vl(178815117UI0)=any&gathStatIcon=true"
 	},
 ];
+slider = [
+	{
+		img:"1.jpg",
+		intro:"前端小站--分享前端资源",
+		link:""
+	},
+	{
+		img:"2.jpg",
+		intro:"前端书籍推荐，带你领略书海浩荡",
+		link:""
+	},
+	{
+		img:"3.jpg",
+		intro:"纸上得来终觉浅，绝知此事要躬行",
+		link:""
+	}
+]

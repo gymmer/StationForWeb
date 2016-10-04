@@ -1,0 +1,70 @@
+#slider{
+	position: relative;
+	width: 1000px;
+	height: 400px;
+	overflow: hidden;
+	margin: 30px auto;
+	border-radius: 5px;
+	box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.20);
+}
+#slider-img img{
+	position: absolute;
+	z-index: 1;
+}
+#slider-img a{
+	font-family: "华文新魏","Helvetica","Arial",sans-serif;
+	background-color: rgba(0,0,0,0.6);
+	color: #FFF;
+	text-decoration: none;
+	font-size: 2em;
+	font-weight: bold;
+	padding: 5px 20px;
+	line-height: 1.5em;
+	display: block;
+	position: absolute;
+	z-index: 3;
+}
+#pre,#next{
+	width: 40px;
+	height: 40px;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 25px;
+	font-size: 4em;
+	color: #AAA;
+	position: absolute;
+	z-index: 4;
+}
+#pre:hover,
+#next:hover{
+	cursor: pointer;
+	background-color: rgba(0,0,0,0.8);
+	color: #FFF;
+}
+#slider-index .arrow{
+	position: absolute;
+	left: 11px;
+	top: 9px;
+}
+#slider-dot{
+	position: absolute;
+	left: 50%;
+	bottom: 30px;
+	z-index: 2;
+}
+#slider-dot span{
+	display: block;
+	float: left;
+	width: 12px;
+	height: 12px;
+	border-radius: 6px;
+	margin-left: 12px;
+}
+#slider-dot span:hover{
+	cursor: pointer;
+}
+#slider-dot span.unactive{
+	background-color: #FFF;
+}
+#slider-dot span.active{
+	background-color: #69aaec;
+}
