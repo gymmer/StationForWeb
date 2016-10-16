@@ -45,6 +45,17 @@ function addScrollEvent(func,args)
 }
 
 /*
+	添加favicon.ico 
+*/
+function addFavicon(){
+	var head = document.getElementsByTagName("head")[0];
+	var iconLink = document.createElement("link");
+	iconLink.setAttribute("rel","icon");
+	iconLink.setAttribute("href","images/favicon.ico");
+	head.appendChild(iconLink);
+}
+
+/*
 	初始化导航栏
 */
 function initialNav()
@@ -211,5 +222,6 @@ function goToTop()
 }
 
 addLoadEvent(goToTop);
+addLoadEvent(addFavicon);
 addLoadEvent(initialNav);
 addLoadEvent(initialFooter);
