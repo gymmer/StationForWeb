@@ -14,6 +14,10 @@ var referBook = [
 	{
 		title:"手册网",
 		link:"http://www.shouce.ren/"
+	},
+	{
+		title:"W3Cfuns-资源",
+		link:"http://www1.w3cfuns.com/feres.php"
 	}
 ]
 
@@ -54,6 +58,10 @@ var techTeaching = [
 
 var recommendWeb = [
 	{
+		title:"BootCDN",
+		link:"http://www.bootcdn.cn/"
+	},
+	{
 		title:"CSS禅意花园",
 		link:"http://www.csszengarden.com/"
 	},
@@ -62,12 +70,12 @@ var recommendWeb = [
 		link:"https://color.adobe.com/zh/create/color-wheel/?base=2&rule=Analogous&selected=2&name=我的 Color 主題&mode=rgb&rgbvalues=0.03203312036748851,0.10985207970366584,1,0.017198723902626816,0.3101637032416498,0.91,0.06889969659629325,0.6051095421295232,1,0.04862681773976891,0.7580843076126083,0.91,0.018899696596293203,1,0.9246810445080357&swatchOrder=0,1,2,3,4"
 	},
 	{
-		title:"幕客",
-		link:"http://www.imooc.com/"
+		title:"配色表",
+		link:"http://www.wufangbo.com/demo/tool/16/index.html"
 	},
 	{
-		title:"W3Cfuns-资源",
-		link:"http://www1.w3cfuns.com/feres.php"
+		title:"幕客",
+		link:"http://www.imooc.com/"
 	},
 	{
 		title:"JavaScript在线压缩",
@@ -81,6 +89,14 @@ var recommendWeb = [
 		title:"猪八戒网",
 		link:"http://www.zbj.com/wzkf/"
 	},
+	{
+		title:"Chrome调试台主题",
+		link:"http://mikeking.io/devtools-author/"
+	},
+	{
+		title:"Chrome开发者工具系列",
+		link:"http://www.cnblogs.com/constantince/p/4565261.html"
+	}
 ]
 
 var experience = [
