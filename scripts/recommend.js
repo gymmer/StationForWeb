@@ -18,6 +18,10 @@ var referBook = [
 	{
 		title:"W3Cfuns-资源",
 		link:"http://www1.w3cfuns.com/feres.php"
+	},
+	{
+		title:"幕客",
+		link:"http://www.imooc.com/"
 	}
 ]
 
@@ -53,6 +57,10 @@ var techTeaching = [
 	{
 		title:"Python科学计算",
 		link:"http://old.sebug.net/paper/books/scipydoc/index.html"
+	},
+	{
+		title:"MySQL",
+		link:"http://www.cnblogs.com/mr-wid/archive/2013/05/09/3068229.html#d1"
 	}
 ]
 
@@ -74,8 +82,8 @@ var recommendWeb = [
 		link:"http://www.wufangbo.com/demo/tool/16/index.html"
 	},
 	{
-		title:"幕客",
-		link:"http://www.imooc.com/"
+		title:"有字库",
+		link:"http://www.youziku.com/"
 	},
 	{
 		title:"JavaScript在线压缩",

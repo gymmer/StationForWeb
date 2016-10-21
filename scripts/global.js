@@ -67,21 +67,22 @@ function initialNav()
 	var nav = document.getElementsByTagName("nav")[0];
 	var navUl = document.createElement("ul");
 
-	navUl.addItem = function(fileName, text)
+	navUl.addItem = function(href, text)
 	{
 		var li = document.createElement("li");
 		var link = document.createElement("a");
 		var linkText = document.createTextNode(text);
-		link.setAttribute("href", fileName+".html");
+		link.setAttribute("href", href);
 		link.appendChild(linkText);
 		li.appendChild(link);
 		this.appendChild(li)
 	}
 
-	navUl.addItem("index","首页");
-	navUl.addItem("book","书籍");
-	navUl.addItem("recommend","推荐");
-	navUl.addItem("about","关于");
+	navUl.addItem("index.html","首页");
+	navUl.addItem("book.html","书籍");
+	navUl.addItem("recommend.html","推荐");
+	navUl.addItem("http://172.22.109.203:8001/","博客");
+	navUl.addItem("about.html","关于");
 	nav.appendChild(navUl);
 }
 
