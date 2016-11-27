@@ -22,6 +22,10 @@ var referBook = [
 	{
 		title:"幕客",
 		link:"http://www.imooc.com/"
+	},
+	{
+		title:"廖雪峰的博客",
+		link:"http://www.liaoxuefeng.com/"
 	}
 ]
 
@@ -127,6 +131,14 @@ var experience = [
 	{
 		title:"[经历] 2016届 前端岗找工作经历",
 		link:"https://bbs.byr.cn/#!article/WWWTechnology/37938"
+	},
+	{
+		title:"给新晋前端攻城狮的一些经验之谈，简单罗列，自由发挥",
+		link:"https://bbs.byr.cn/#!article/WWWTechnology/38004"
+	},
+	{
+		title:"在 2016 年学 JavaScript 是一种什么样的体验",
+		link:"https://bbs.byr.cn/#!article/JavaScript/459"
 	},
 	{
 		title:"筛选简历规则zz",
